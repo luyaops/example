@@ -1,1 +1,1 @@
-# example
+# gRPC-Gateway Example
