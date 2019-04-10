@@ -42,3 +42,6 @@ protoc -I/usr/local/include -I. \
   --swagger_out=logtostderr=true:. \
   path/to/your_service.proto
 ```
+
+## 5、参考文章
+https://grpc-ecosystem.github.io/grpc-gateway/docs/usage.html
