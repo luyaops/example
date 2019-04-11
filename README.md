@@ -15,7 +15,7 @@ go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 go get -u github.com/golang/protobuf/protoc-gen-go
 go get -u github.com/gogo/protobuf/protoc-gen-gogofast //更快更多的生成代码 
 ```
-关于[/gogo](https://github.com/gogo/protobuf)
+关于[gogo](https://github.com/gogo/protobuf)
 
 ## 2、生成go版本的gRPC存根
 ```shell
@@ -46,5 +46,5 @@ protoc -I/usr/local/include -I. \
 ```
 
 ## 5、参考文章
-https://grpc-ecosystem.github.io/grpc-gateway/docs/usage.html
-https://github.com/gogo/protobuf
+* https://grpc-ecosystem.github.io/grpc-gateway/docs/usage.html
+* https://github.com/gogo/protobuf
