@@ -1,6 +1,11 @@
 # gRPC-Gateway Example
 
-## 1、安装ProtocolBuffers
+## 1、安装gRPC
+```shell
+go get -u get google.golang.org/grpc
+```
+
+## 2、安装ProtocolBuffers
 ```shell
 git clone https://github.com/google/protobuf
 cd protobuf
@@ -17,7 +22,7 @@ go get -u github.com/gogo/protobuf/protoc-gen-gogofast //更快更多的生成�
 ```
 关于[gogo](https://github.com/gogo/protobuf)
 
-## 2、生成go版本的gRPC存根
+## 3、生成go版本的gRPC存根
 ```shell
 protoc -I/usr/local/include -I. \
   -I$GOPATH/src \
@@ -27,7 +32,7 @@ protoc -I/usr/local/include -I. \
 ```
 将生成存根文件 path/to/your_service.pb.go
 
-## 3、生成反向代理（可选）
+## 4、生成反向代理（可选）
 ```shell
 protoc -I/usr/local/include -I. \
   -I$GOPATH/src \
@@ -36,7 +41,7 @@ protoc -I/usr/local/include -I. \
   path/to/your_service.proto
 ```
 
-## 4、生成swagger（可选）
+## 5、生成swagger（可选）
 ```shell
 protoc -I/usr/local/include -I. \
   -I$GOPATH/src \
@@ -45,6 +50,6 @@ protoc -I/usr/local/include -I. \
   path/to/your_service.proto
 ```
 
-## 5、参考文章
+## 6、参考文章
 * https://grpc-ecosystem.github.io/grpc-gateway/docs/usage.html
 * https://github.com/gogo/protobuf
