@@ -40,7 +40,11 @@ protoc -I/usr/local/include -I. \
   --grpc-gateway_out=logtostderr=true:. \
   path/to/your_service.proto
 ```
+假如报：protoc-gen-grpc-gateway: program not found or is not executable
 
+cd $GOPATH/src/github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway && go install
+
+会在 $GOPATH/bin 目录下创建protoc-gen-grpc-gateway 可执行文件
 ## 5、生成swagger（可选）
 ```shell
 protoc -I/usr/local/include -I. \
