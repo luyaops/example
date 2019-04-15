@@ -2,12 +2,13 @@ package service
 
 import (
 	"golang.org/x/net/context"
-	pb "luyaops/example/service"
+	pb "luyaops/example/proto"
+	"luyaops/fw/core"
 	"net/http"
 )
 
 type SayServerImpl struct {
-	//core.InjectionService
+	core.InjectionService
 }
 
 func (s *SayServerImpl) Echo(ctx context.Context, req *pb.HelloRequest) (*pb.EchoResponse, error) {
