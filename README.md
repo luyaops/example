@@ -2,7 +2,7 @@
 
 ## 1、安装gRPC
 ```shell
-go get -u get google.golang.org/grpc
+go get -u google.golang.org/grpc
 ```
 
 ## 2、安装ProtocolBuffers
