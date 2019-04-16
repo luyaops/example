@@ -12,6 +12,6 @@ func main() {
 	pb.RegisterSayServer(host.Server, &impl.SayServerImpl{})
 
 	if err := host.Run(); err != nil {
-		log.Fatal("Failed to host run: %v", err)
+		log.Fatalf("Failed to host run: %v", err)
 	}
 }
