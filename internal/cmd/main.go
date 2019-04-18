@@ -1,17 +1,18 @@
 package main
 
 import (
-	"log"
-	impl "luyaops/example/internal/impl/service"
-	pb "luyaops/example/proto"
-	"luyaops/fw/core"
+	impl "github.com/luyaops/example/internal/impl/service"
+	pb "github.com/luyaops/example/proto"
+	"github.com/luyaops/fw/common/log"
+	"github.com/luyaops/fw/core"
 )
 
 func main() {
-	host := core.NewRpcHosting()
-	pb.RegisterSayServer(host.Server, &impl.SayServerImpl{})
+	// 初始化一个gRpc服务
+	server := core.NewRpcServer()
+	pb.RegisterSayServer(server.Server, &impl.SayServerImpl{})
 
-	if err := host.Run(); err != nil {
-		log.Fatalf("Failed to host run: %v", err)
+	if err := server.Run(); err != nil {
+		log.Fatalf("Failed to run rpc server: %v", err)
 	}
 }
