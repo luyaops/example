@@ -16,6 +16,7 @@ make check
 make install
 
 go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
+go get -u github.com/github.com/luyaops/fw/protoc-gen-json   //用于生成服务注册文件
 go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-swagger
 go get -u github.com/golang/protobuf/protoc-gen-go
 go get -u github.com/gogo/protobuf/protoc-gen-gogofast //更快更多的生成代码 
