@@ -3,10 +3,19 @@
 ## 1、安装gRPC
 ```shell
 go get -u google.golang.org/grpc
+
+上面命令被墙，并且源码已经托管至github上了。用以下命令安装。
+mkdir -p $GOPATH/src/google.golang.org/
+cd $GOPATH/src/google.golang.org
+git clone https://github.com/grpc/grpc-go grpc
+
 ```
 
 ## 2、安装ProtocolBuffers
 ```shell
+安装所需包：
+sudo apt-get install autoconf automake libtool curl make g++ unzip 
+
 git clone https://github.com/google/protobuf
 cd protobuf
 ./autogen.sh
