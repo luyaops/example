@@ -29,6 +29,7 @@ cd protobuf
 make
 make check
 make install
+sudo ldconfig
 
 go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 go get -u github.com/github.com/luyaops/fw/protoc-gen-json   //用于生成服务注册文件
