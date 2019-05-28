@@ -3,10 +3,25 @@
 ## 1、安装gRPC
 ```shell
 go get -u google.golang.org/grpc
+
+上面命令被墙，并且源码已经托管至github上了。用以下命令安装。
+git clone https://github.com/grpc/grpc-go.git $GOPATH/src/google.golang.org/grpc
+git clone https://github.com/golang/net.git $GOPATH/src/golang.org/x/net
+git clone https://github.com/golang/text.git $GOPATH/src/golang.org/x/text
+git clone https://github.com/golang/sys.git $GOPATH/src/golang.org/x/sys
+go get -u github.com/golang/protobuf/{proto,protoc-gen-go}
+git clone https://github.com/google/go-genproto.git $GOPATH/src/google.golang.org/genproto
+
+cd $GOPATH/src/
+go install google.golang.org/grpc
+
 ```
 
 ## 2、安装ProtocolBuffers
 ```shell
+安装所需包：
+sudo apt-get install autoconf automake libtool curl make g++ unzip 
+
 git clone https://github.com/google/protobuf
 cd protobuf
 ./autogen.sh
@@ -14,6 +29,7 @@ cd protobuf
 make
 make check
 make install
+sudo ldconfig
 
 go get -u github.com/grpc-ecosystem/grpc-gateway/protoc-gen-grpc-gateway
 go get -u github.com/github.com/luyaops/fw/protoc-gen-json   //用于生成服务注册文件
