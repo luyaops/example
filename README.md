@@ -74,3 +74,8 @@ protoc -I/usr/local/include -I. \
 ## 6、参考文章
 * https://grpc-ecosystem.github.io/grpc-gateway/docs/usage.html
 * https://github.com/gogo/protobuf
+
+
+## 7、 Make使用
+* make proto 生成 pb.go文件
+* make generate 生成注册文件
