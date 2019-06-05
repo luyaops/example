@@ -20,7 +20,7 @@ protobuf:
 generate:protobuf
 	@echo Generate register.go file by protocol buffers
 	@protoc -I/usr/local/include -I. -I$(GOPATH)/src \
-    -I$(GOPATH)/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@${GRPC_GATEWAY_VERSION}/third_party/googleapis \
-    -I$(GOPATH)/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
+	-I$(GOPATH)/pkg/mod/github.com/grpc-ecosystem/grpc-gateway@${GRPC_GATEWAY_VERSION}/third_party/googleapis \
+	-I$(GOPATH)/src/github.com/grpc-ecosystem/grpc-gateway/third_party/googleapis \
 	./proto/*.proto --json_out=.
 	@echo Generate register successfully
